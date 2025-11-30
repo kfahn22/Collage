@@ -1,6 +1,6 @@
-//////////////////////////////////////////////////
-// Object for creation and real-time resize of canvas
-// Good function to create canvas and resize functions. I use this in all examples.
+// Minimally edited from https://editor.p5js.org/acamposuribe/sketches/oqlWTatWG
+
+
 const C = {
     loaded: false,
     prop() {return this.height/this.width},

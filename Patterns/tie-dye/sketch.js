@@ -1,10 +1,10 @@
-// Port of shader that is no longer available on shadertoy. I have incorported the Lygia library.
-// I think original author's name is shaderjiang
-//https://www.shadertoy.com/view/ctByWz (shadertoyjiang)
+/* I ported this code a while ago.  I think it is adapted from this code, but not sure at this point
+
+https://www.shadertoy.com/view/ctByWz (shadertoyjiang)
+*/
 
 let shdr;
-//let colors = ["#edf7f8", "#008a99", " #8c1508"];
-//let palette = [[240, 90, 88], [84, 197, 201], [61, 42, 137]]
+
 let palette = [
   [12, 71, 103],
   //[86, 110, 61],

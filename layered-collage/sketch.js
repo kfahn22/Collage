@@ -174,3 +174,10 @@ function choosePattern(choice) {
       break;
   }
 }
+
+// Function to save the canvas as an image when 's' key is pressed
+function keyPressed() {
+  if (key === "s" || key === "S") {
+    save("collage.jpg");
+  }
+}

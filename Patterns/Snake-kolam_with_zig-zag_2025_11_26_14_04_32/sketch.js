@@ -149,110 +149,110 @@ function turtle() {
 }
 
 // Helper functions to convert the url string to the palette array from chatGPT
-function createPaletteFromURL(url) {
-  // Extract the color codes from the URL using a regular expression
-  let regex = /[0-9A-F]{6}/gi;
-  let matches = url.match(regex);
+// function createPaletteFromURL(url) {
+//   // Extract the color codes from the URL using a regular expression
+//   let regex = /[0-9A-F]{6}/gi;
+//   let matches = url.match(regex);
 
-  // Convert HEX codes to RGB and create the palette array
-  let palette = matches.map((hex) => hexToRgb(hex));
+//   // Convert HEX codes to RGB and create the palette array
+//   let palette = matches.map((hex) => hexToRgb(hex));
 
-  return palette;
-}
+//   return palette;
+// }
 
 // Helper function to convert HEX to RGB
-function hexToRgb(hex) {
-  let r = parseInt(hex.slice(0, 2), 16);
-  let g = parseInt(hex.slice(2, 4), 16);
-  let b = parseInt(hex.slice(4, 6), 16);
-  let a = 255;
-  return [r, g, b, a];
-}
+// function hexToRgb(hex) {
+//   let r = parseInt(hex.slice(0, 2), 16);
+//   let g = parseInt(hex.slice(2, 4), 16);
+//   let b = parseInt(hex.slice(4, 6), 16);
+//   let a = 255;
+//   return [r, g, b, a];
+// }
 
-function addPalettes() {
-  paletteDropdown = createSelect();
-  paletteDropdown.position(width + 5, 5);
-  paletteDropdown.option("orange");
-  paletteDropdown.option("orange_green");
-  paletteDropdown.option("blue");
-  paletteDropdown.option("purple");
-  paletteDropdown.option("purple_aqua");
-  paletteDropdown.option("blue_green");
-  paletteDropdown.option("blue_aqua");
-  paletteDropdown.option("blue_yellow");
-  paletteDropdown.option("orange_blue");
+// // function addPalettes() {
+//   paletteDropdown = createSelect();
+//   paletteDropdown.position(width + 5, 5);
+//   paletteDropdown.option("orange");
+//   paletteDropdown.option("orange_green");
+//   paletteDropdown.option("blue");
+//   paletteDropdown.option("purple");
+//   paletteDropdown.option("purple_aqua");
+//   paletteDropdown.option("blue_green");
+//   paletteDropdown.option("blue_aqua");
+//   paletteDropdown.option("blue_yellow");
+//   paletteDropdown.option("orange_blue");
 
-  // Set default palette
-  paletteDropdown.selected("blue_yellow");
-  url = paletteDropdown.changed(selectPalette);
-}
+//   // Set default palette
+//   paletteDropdown.selected("blue_yellow");
+//   url = paletteDropdown.changed(selectPalette);
+// }
 
-function selectPalette() {
-  currentPalette = paletteDropdown.value();
+// function selectPalette() {
+//   currentPalette = paletteDropdown.value();
 
-  switch (currentPalette) {
-    case "blue":
-      url =
-        "https://supercolorpalette.com/?scp=G0-hsl-2A1FFF-242BFF-2942FF-2E58FF-336DFF-3881FF";
-      break;
-    case "orange":
-      url =
-        "https://supercolorpalette.com/?scp=G0-hsl-FFA91F-FF9924-FF8929-FF7B2E-FF6D33-FF6038";
-      break;
-      case "orange_green": 
-     url =
-       "https://supercolorpalette.com/?scp=G0-hsl-FF9E1F-FFE957-F4C148-73BE50-18AF6B";
-       break;
-    case "blue_yellow":
-      url =
-        "https://supercolorpalette.com/?scp=G0-hsl-FFDA1F-FFC71F-FFB41F-FFA21F-1F44FF-1F57FF-1F69FF-1F7CFF";
-      break;
-    case "purple":
-      url =
-        "https://supercolorpalette.com/?scp=G0-hsl-1F7CFF-1F5EFF-1F40FF-1F22FF-391FFF-571FFF-751FFF-931FFF";
-      break;
-       case "purple_aqua":
-      url =
-        "https://supercolorpalette.com/?scp=G0-hsl-BF1FFF-9C24FF-7B29FF-5B2EFF-3D33FF-384FFF-3D74FF-4297FF-47B9FF-4DD8FF";
-      break;
-    case "blue_green":
-      url =
-        "https://supercolorpalette.com/?scp=G0-hsl-3C80B4-3C8AB4-3C94B4-3C9EB4-3CA8B4-3CB2B4-3CB4AC-3CB4A2";
-      break;
-    case "blue_aqua":
-      url =
-        "https://supercolorpalette.com/?scp=G0-hsl-1F75FF-1F87FF-1F9AFF-1FADFF-1FBFFF-1FD2FF-1FE5FF-1FF8FF";
-      break;
-    case "orange_blue":
-      url =
-        "https://supercolorpalette.com/?scp=G0-hsl-FF8B1F-FF781F-FF661F-1F9CFF-1FAFFF";
-      break;
-  }
-  return url;
-}
+//   switch (currentPalette) {
+//     case "blue":
+//       url =
+//         "https://supercolorpalette.com/?scp=G0-hsl-2A1FFF-242BFF-2942FF-2E58FF-336DFF-3881FF";
+//       break;
+//     case "orange":
+//       url =
+//         "https://supercolorpalette.com/?scp=G0-hsl-FFA91F-FF9924-FF8929-FF7B2E-FF6D33-FF6038";
+//       break;
+//       case "orange_green": 
+//      url =
+//        "https://supercolorpalette.com/?scp=G0-hsl-FF9E1F-FFE957-F4C148-73BE50-18AF6B";
+//        break;
+//     case "blue_yellow":
+//       url =
+//         "https://supercolorpalette.com/?scp=G0-hsl-FFDA1F-FFC71F-FFB41F-FFA21F-1F44FF-1F57FF-1F69FF-1F7CFF";
+//       break;
+//     case "purple":
+//       url =
+//         "https://supercolorpalette.com/?scp=G0-hsl-1F7CFF-1F5EFF-1F40FF-1F22FF-391FFF-571FFF-751FFF-931FFF";
+//       break;
+//        case "purple_aqua":
+//       url =
+//         "https://supercolorpalette.com/?scp=G0-hsl-BF1FFF-9C24FF-7B29FF-5B2EFF-3D33FF-384FFF-3D74FF-4297FF-47B9FF-4DD8FF";
+//       break;
+//     case "blue_green":
+//       url =
+//         "https://supercolorpalette.com/?scp=G0-hsl-3C80B4-3C8AB4-3C94B4-3C9EB4-3CA8B4-3CB2B4-3CB4AC-3CB4A2";
+//       break;
+//     case "blue_aqua":
+//       url =
+//         "https://supercolorpalette.com/?scp=G0-hsl-1F75FF-1F87FF-1F9AFF-1FADFF-1FBFFF-1FD2FF-1FE5FF-1FF8FF";
+//       break;
+//     case "orange_blue":
+//       url =
+//         "https://supercolorpalette.com/?scp=G0-hsl-FF8B1F-FF781F-FF661F-1F9CFF-1FAFFF";
+//       break;
+//   }
+//   return url;
+// }
 
-function reset() {
-  push();
-  url = selectPalette();
-  palette = createPaletteFromURL(url);
+// function reset() {
+//   push();
+//   url = selectPalette();
+//   palette = createPaletteFromURL(url);
 
-  selectedShape = new Zigzag(0, 0, length * shapeScale, radians(0));
-  selectedShape.addPoints();
-  translate(width * 0.05, height * 0.05);
-  background(0);
-  setRule(fractal);
-  for (let i = 0; i < level; i++) {
-    generate();
-  }
-  turtle();
-  pop();
+//   selectedShape = new Zigzag(0, 0, length * shapeScale, radians(0));
+//   selectedShape.addPoints();
+//   translate(width * 0.05, height * 0.05);
+//   background(0);
+//   setRule(fractal);
+//   for (let i = 0; i < level; i++) {
+//     generate();
+//   }
+//   turtle();
+//   pop();
 
-  applyChromaticGrain(42);
-}
+//   applyChromaticGrain(42);
+// }
 
-// Function to save the canvas as an image when 's' key is pressed
-function keyPressed() {
-  if (key === "s" || key === "S") {
-    save("snake-kolam.png");
-  }
-}
+// // Function to save the canvas as an image when 's' key is pressed
+// function keyPressed() {
+//   if (key === "s" || key === "S") {
+//     save("snake-kolam.png");
+//   }
+// }
