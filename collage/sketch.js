@@ -99,7 +99,7 @@ async function setup() {
 }
 
 function draw() {
-  background("#fdfff7");
+  background("#82c8e5");
 
   for (let s of shapes) {
     push();
