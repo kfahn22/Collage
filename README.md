@@ -1,4 +1,4 @@
-# Collage -WIP
+# Collage
 
 
 Collage sketches created for #WCCChallenge "Child's Art" and "Collage"
