@@ -3,6 +3,8 @@
 
 Collage sketches created for #WCCChallenge "Child's Art" and "Collage"
 
+Check out the challenge [here](https://openprocessing.org/curation/78544)
+
 ## "Magazine" Collage
 
 <p align="center"><img src="assets/collage-2.jpg" alt="Bird collage" width="500px"></p>
